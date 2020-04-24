@@ -1,0 +1,12 @@
+{
+  "name": "mecab-api",
+  "script": "src/server.js",
+  "env": {
+    "DICT_DIR": "/usr/local/lib/mecab/dic/mecab-ipadic-neologd",
+    "PORT": 3331
+  },
+  "env_production": {
+    "DICT_DIR": "/home/coding_fri/mecab-ipadic-neologd",
+    "PORT": 80
+  }
+}

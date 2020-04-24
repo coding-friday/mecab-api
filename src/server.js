@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 
-const PORT = 3331;
+const PORT = process.env.PORT;
 
 const MeCab = new require('mecab-async');
 const mecab = new MeCab();
-mecab.command = 'mecab -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd';
+mecab.command = `mecab -d ${process.env.DICT_DIR}`;
 
 app.get('/', (req, res) => {
   const { word } = req.query;
