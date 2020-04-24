@@ -12,9 +12,9 @@ app.get('/health-check', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  const { word } = req.query;
-  if (word) {
-    mecab.parse(word, (err, result) => {
+  const { text } = req.query;
+  if (text) {
+    mecab.parse(text, (err, result) => {
       if (err) throw err;
       const outputs = result.map((morph) => {
         const [
