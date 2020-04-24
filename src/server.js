@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
           pronounciation,
         };
       });
-      res.send({ outputs });
+      res.json({ outputs });
     });
   } else {
     res.sendStatus(404);
